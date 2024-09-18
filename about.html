@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sweet Treats Bakery - About Us</title>
     <link rel="stylesheet" href="styles.css" />
+    <!--Font Awesome-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <style>
       body,
       html {
@@ -18,7 +26,7 @@
       .navbar {
         display: flex;
         justify-content: space-between;
-        background-color: #333;
+        background-color: black;
         padding: 10px;
         position: fixed; /* Fixed position */
         top: 0;
@@ -95,10 +103,18 @@
 
       /* Add some space between sections */
       footer {
+        display: flex;
+        justify-content: space-evenly;
         padding: 20px;
         background-color: #333;
         color: white;
         text-align: center;
+      }
+
+      .social a {
+        color: white;
+        padding: 10px;
+        font-size: 20px;
       }
 
       /* Optional: Customize the background further */
@@ -143,6 +159,18 @@
 
     <footer>
       <p>&copy; 2024 Sweet Treats Bakery. All rights reserved.</p>
+      <div class="social">
+        <a href="https://www.instagram.com" target="_blank"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://github.com" target="_blank"
+          ><i class="fa-brands fa-github"></i
+        ></a>
+        <a href="https://github.com" target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+            
+      </div>
     </footer>
 
     <!-- Optional JS for fade-in animation -->
