@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Treats Bakery - Menu</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Navbar styles */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #333;
+        padding: 10px;
+        position: fixed; /* Make navbar fixed */
+        top: 0;
+        width: 100%;
+        z-index: 100;
+      }
+
+      .logo h1 {
+        color: white;
+        font-size: 24px;
+      }
+
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links li {
+        display: inline;
+      }
+
+      .nav-links a {
+        color: white;
+        text-decoration: none;
+        padding: 8px 16px;
+      }
+
+      .nav-links a:hover {
+        background-color: #555;
+        border-radius: 5px;
+      }
+
+      /* Menu Page Styling */
+      .menu-section {
+        padding: 100px 50px 50px;
+        background: linear-gradient(135deg, #f9e3c1, #f9e3d5);
+        min-height: 100vh;
+      }
+
+      .menu-section h2 {
+        text-align: center;
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      /* Product Cards Grid */
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 0 20px;
+      }
+
+      /* Individual Product Card */
+      .menu-card {
+        background-color: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .menu-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .menu-card-content {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .menu-card-content h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #ff6347;
+      }
+
+      .menu-card-content p {
+        font-size: 1em;
+        color: #666;
+        margin-bottom: 15px;
+      }
+
+      .menu-card-content .price {
+        font-size: 1.2em;
+        color: #333;
+        font-weight: bold;
+      }
+
+      /* Footer */
+      footer {
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Sweet Treats Bakery</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+      <h2>Our Menu</h2>
+
+      <div class="menu-grid">
+        <!-- Menu Item 1 -->
+        <div class="menu-card">
+          <img src="images/Chocolate cake.jpeg" alt="Cake" />
+          <div class="menu-card-content">
+            <h3>Chocolate Cake</h3>
+            <p>A rich and creamy chocolate delight for all occasions.</p>
+            <div class="price">₹400</div>
+          </div>
+        </div>
+
+        <!-- Menu Item 2 -->
+        <div class="menu-card">
+          <img src="images/Choco.jpeg" alt="Cookie" />
+          <div class="menu-card-content">
+            <h3>Choco Chip Cookie</h3>
+            <p>Crunchy and gooey, filled with rich chocolate chips.</p>
+            <div class="price">₹50</div>
+          </div>
+        </div>
+
+        <!-- Menu Item 3 -->
+        <div class="menu-card">
+          <img src="images/Pastry.jpeg" alt="Pastry" />
+          <div class="menu-card-content">
+            <h3>Vanilla Pastry</h3>
+            <p>Light and fluffy vanilla pastry with a hint of sweetness.</p>
+            <div class="price">₹120</div>
+          </div>
+        </div>
+
+        <!-- Menu Item 4 -->
+        <div class="menu-card">
+          <img src="images/Latte.jpeg" alt="Beverage" />
+          <div class="menu-card-content">
+            <h3>Latte</h3>
+            <p>Freshly brewed coffee with a silky smooth texture.</p>
+            <div class="price">₹80</div>
+          </div>
+        </div>
+
+        <!-- Additional Cards to Remove Empty Space -->
+        <!-- Menu Item 5 -->
+        <div class="menu-card">
+          <img src="images/Red Velvet.jpeg" alt="Cake" />
+          <div class="menu-card-content">
+            <h3>Red Velvet Cake</h3>
+            <p>
+              A moist and fluffy red velvet cake with a rich cream cheese
+              frosting.
+            </p>
+            <div class="price">₹500</div>
+          </div>
+        </div>
+
+        <!-- Menu Item 6 -->
+        <div class="menu-card">
+          <img src="images/Peanut.jpg" alt="Cookie" />
+          <div class="menu-card-content">
+            <h3>Peanut Butter Cookie</h3>
+            <p>Soft, chewy peanut butter cookies with a classic taste.</p>
+            <div class="price">₹60</div>
+          </div>
+        </div>
+
+        <!-- Menu Item 7 -->
+        <div class="menu-card">
+          <img src="images/Chocolate Pastry.jpg" alt="Pastry" />
+          <div class="menu-card-content">
+            <h3>Chocolate Pastry</h3>
+            <p>Deliciously layered chocolate pastry with smooth ganache.</p>
+            <div class="price">₹130</div>
+          </div>
+        </div>
+
+        <!-- Menu Item 8 -->
+        <div class="menu-card">
+          <img src="images/Espresso.jpg" alt="Beverage" />
+          <div class="menu-card-content">
+            <h3>Espresso</h3>
+            <p>Strong and flavorful espresso for a quick energy boost.</p>
+            <div class="price">₹60</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Sweet Treats Bakery. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

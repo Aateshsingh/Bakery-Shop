@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sweet Treats Bakery - Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Navbar styles */
+      .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #333;
+        padding: 10px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .navbar.scrolled {
+        background-color: #444;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .logo h1 {
+        color: #fff;
+        font-size: 24px;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+      }
+
+      .nav-links {
+        list-style-type: none;
+        display: flex;
+        gap: 20px;
+      }
+
+      .nav-links li {
+        display: inline;
+      }
+
+      .nav-links a {
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 18px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        font-family: "Arial", sans-serif;
+      }
+
+      .nav-links a:hover {
+        background-color: #555;
+        transform: translateY(-2px);
+      }
+
+      /* Responsive Navbar */
+      @media (max-width: 768px) {
+        .nav-links {
+          display: block;
+          text-align: center;
+        }
+
+        .nav-links li {
+          margin-bottom: 10px;
+        }
+
+        .nav-links a {
+          display: block;
+          padding: 15px;
+        }
+      }
+
+      /* Contact Section */
+      .contact-section {
+        padding: 120px 50px; /* Adjusted padding to avoid navbar overlap */
+        background: linear-gradient(
+          to right,
+          #ffecd2,
+          #fcb69f
+        ); /* Gradient background */
+        min-height: 100vh;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .contact-section h2 {
+        font-size: 3em;
+        margin-bottom: 20px;
+        color: #333;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeIn 1s ease-in-out;
+      }
+
+      .contact-form {
+        max-width: 700px;
+        margin: 0 auto;
+        background-color: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        animation: slideUp 0.8s ease;
+      }
+
+      .contact-form label {
+        display: block;
+        font-size: 1.1em;
+        margin-bottom: 10px;
+        color: #333;
+        text-align: left;
+        padding-left: 10px;
+      }
+
+      .contact-form input,
+      .contact-form textarea,
+      .contact-form select {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        font-size: 1.1em;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        appearance: none; /* Remove default styling */
+        background-color: white;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus,
+      .contact-form select:focus {
+        border-color: #ff6347;
+        outline: none;
+        box-shadow: 0 0 10px rgba(255, 99, 71, 0.4);
+        transition: box-shadow 0.3s ease-in-out;
+      }
+
+      .contact-form button {
+        background-color: #ff6347;
+        color: white;
+        border: none;
+        padding: 15px;
+        font-size: 1.2em;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background-color: #ff7f50;
+        transform: translateY(-3px);
+      }
+
+      /* Custom Select Styling */
+      .contact-form select {
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        font-size: 1.1em;
+        cursor: pointer;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj4KICA8cGF0aCBkPSJNNTAsMEwgNTAsNTAgTDAsNTAgNTAsMEwgNTAsMEwgNTAsMEwiIHN0cm9rZT0iIzQ0NDQ0NCIgc3Ryb2tlLXdpZHRoPSI3IiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1kYXNoYXJrLWJhc2VsaW5lLWNvbG9yPSJ3aGl0ZSIgc3Ryb2tlLWxpbmVjYXAtbGFuZz0iZW5kIi8+Cjwvc3ZnPg=="); /* Custom arrow */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 16px 12px;
+      }
+
+      .contact-form select option {
+        padding: 10px;
+      }
+
+      /* Contact Info */
+      .contact-info {
+        margin-top: 30px;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: inline-block;
+        text-align: left;
+        max-width: 400px;
+        margin: 20px auto;
+      }
+
+      .contact-info p {
+        margin: 10px 0;
+        font-size: 1.1em;
+        color: #555;
+      }
+
+      /* Decorative Shapes */
+      .decorative-shapes {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .shape1 {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        width: 20%;
+        opacity: 0.3;
+        fill: #ff6347;
+      }
+
+      .shape2 {
+        position: absolute;
+        bottom: 10%;
+        right: 5%;
+        width: 20%;
+        opacity: 0.3;
+        fill: #fcb69f;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideUp {
+        from {
+          transform: translateY(50px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+
+      /* Footer */
+      footer {
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Section -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>Sweet Treats Bakery</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+
+      <div class="contact-form">
+        <form action="submit_contact.php" method="POST">
+          <label for="inquiry-type">I want to inquire about:</label>
+          <select id="inquiry-type" name="inquiry_type" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="orders">Orders</option>
+            <option value="catering">Catering Services</option>
+            <option value="feedback">Feedback</option>
+          </select>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <p>Phone: +91 98765 43210</p>
+        <p>Email: contact@sweettreatsbakery.com</p>
+      </div>
+
+      <div class="decorative-shapes">
+        <svg
+          class="shape1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+        >
+          <circle cx="50" cy="50" r="50" />
+        </svg>
+        <svg
+          class="shape2"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+        >
+          <rect x="0" y="0" width="100" height="100" />
+        </svg>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Sweet Treats Bakery. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
